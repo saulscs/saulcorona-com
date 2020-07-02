@@ -6,5 +6,28 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`100`, `400`, `500`, `600`, `700`, `900`],
+          },
+          {
+            family: `Open Sans`,
+            variants: [`100`, `400`, `500`, `600`, `700`, `900`],
+          }
+        ]
+      }
+    },
+  ],
 }

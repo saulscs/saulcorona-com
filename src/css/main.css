@@ -1,0 +1,27 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root{
+    --ff-primary: "Montserrat", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --clr-white: #ffffff;
+    --crl-black: #000000;
+    --clr-yellow: #ffc907;
+    --clr-ligth-blue: #02b9fd;
+    --clr-dark-blue: #02519c;
+}
+
+*,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: red;
+  }
