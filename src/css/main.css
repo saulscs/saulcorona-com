@@ -114,7 +114,7 @@ Variables
   
   .btn{
     text-transform: uppercase;
-    background-color: var(--clr-dark-blue);
+    background-color: var(--clr-ligth-blue);
     color:var(--clr-grey-9);
     padding: 0.375rem 0.75rem;
     letter-spacing: var(--spacing);
@@ -163,7 +163,7 @@ Variables
       width: 5rem;
       height: 0.25rem;
       margin-bottom: 1.25rem;
-      background: var(--clr-primary-5);
+      background: var(--clr-yellow);
       margin-left: auto;
       margin-right: auto;
     }
@@ -178,13 +178,13 @@ Variables
     /* social links */
   .social-links {
     margin-top: 2rem;
-    width: 15rem;
+    width: 25rem;
     display: flex;
     justify-content: space-between;
   }
   .social-link {
-    font-size: 1.75rem;
-    color: var(--clr-grey-1);
+    font-size: 2.75rem;
+    color: var(--clr-white);
     transition: var(--transition);
   }
   .social-link:hover {
@@ -242,6 +242,7 @@ Variables
   .nav-links {
     display: none;
   }
+  
 
   @media screen and (min-width: 768px){
     .toggle-btn {
@@ -256,7 +257,7 @@ Variables
     }
     .nav-links a {
       text-transform: capitalize;
-      color: var(--clr-dark-blue);
+      color: var(--crl-black);
       font-weight: bold;
       letter-spacing: var(--spacing);
       transition: var(--transition);
@@ -264,7 +265,7 @@ Variables
     }
     .nav-links a:hover {
       color: var( --clr-ligth-blue);
-      box-shadow: 0px 2px var(--clr-primary-5);
+      box-shadow: 0px 2px var(--clr-yellow);
     }
     .nav-center {
       display: grid;
@@ -275,7 +276,7 @@ Variables
   
   @media screen and (min-width: 992px) {
     .navbar {
-      background: transparent;
+      background: var(--clr-white);
     }
   }
   /*
@@ -410,9 +411,75 @@ Variables
   /* underline added to globals */
 
  .hero{
-   margin-top: -5rem;
+   margin-top: 3rem;
    padding-top: 5rem;
-   height: 100vh;
+   height: 90vh;
    position: relative;
    background: url('../assets/saul.jpg');
- } 
+   background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px){
+  .hero{
+    background: url('../assets/saulMobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .social-links {
+    width: 12rem;
+  }
+  .social-link {
+    font-size: 2rem;
+  }
+}
+
+.hero-center{
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.hero-info{
+  grid-row: 1;
+  grid-column: 5/span 8;
+}
+
+.hero .underline{
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.hero-info h1, h4 {
+  color: var(--clr-white);
+}
+
+.hero-icons {
+  justify-items: flex-start;
+}
+.hero .btn {
+  margin-top: 1.25rem;
+}
+
+@media screen and (min-width: 992px) {
+  .hero::before {
+    
+    position: absolute;
+    top: 0;
+    left: 65%;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-white);
+  }
+  .hero-center {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero h4 {
+    font-size: 0.85rem;
+  }
+
+  .hero-info {
+    grid-column-start: none;
+  }
+}

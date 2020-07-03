@@ -2,11 +2,11 @@ import React from 'react'
 import Navbar from './Navbar'
 
 
-const Layout = ({childen}) => {
+const Layout = ({children}) => {
     return (
         <>
             <Navbar/>
-            {childen}   
+            {children}   
         </>
     )
 }
