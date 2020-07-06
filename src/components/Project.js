@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Image from 'gatsby-image'
-import { FaPython } from 'react-icons/fa'
 
 
- const Project = ({description, title,url,image,stack,index}) => {
+
+ const Project = ({description, title,url,image,stack}) => {
      console.log(title)
     return (
         <article className="project">
@@ -29,7 +29,13 @@ import { FaPython } from 'react-icons/fa'
     )
 }
 
-Project.propTypes = {}
+Project.propTypes = {
+    description: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    image: PropTypes.object.isRequired,
+    stack: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
 
 export default Project
 

@@ -1,13 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
 
- const acerca = () => {
+const contacto = () => {
     return (
         <Layout>
-            <h1>Sobre mi</h1>
+            <h2>Contacto</h2>
         </Layout>
     )
 }
 
-export default acerca
+export default contacto
