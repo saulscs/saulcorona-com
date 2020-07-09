@@ -522,6 +522,20 @@ Variables
   color: var(--clr-dark-blue);
 }
 
+.designation{
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+}
+
+.service img {
+  width: 60px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
 .service .underline{
   width: 3rem;
   height: 0.12rem;
@@ -1019,3 +1033,4 @@ Variables
   }
     
 }
+

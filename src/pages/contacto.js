@@ -20,10 +20,15 @@ const contacto = () => {
                                 className="contact-link">
                                 <FaWhatsapp/>
                                 </a>
+                                <a href="http://bit.ly/whatsapppaginaweb" 
+                                target="blank"
+                                className="contact-link">
                                 <p>+ 52 5551858906</p>
+                                </a>
                             </article>
                             <article>
-                                <a href="" className="contact-link">
+                                <a href="/contacto" 
+                                className="contact-link">
                                 <FaMailBulk/>
                                 </a>
                                 <p>saulcoronascs@gmail.com</p>
