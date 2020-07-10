@@ -2,10 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Title from '../components/Title' 
 import {FaWhatsapp, FaMailBulk} from 'react-icons/fa' 
+import SEO from '../components/SEO'
 
 const contacto = () => {
     return (
         <Layout>
+            <SEO title="Saúl Contacto"/>
             <section className="contact-page">
                 <section className="section-center contact">
                     <Title title="Estamos en contacto"/>

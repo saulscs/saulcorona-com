@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import Title from '../components/Title'
 import Image from 'gatsby-image'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 
 
@@ -14,6 +15,7 @@ import Layout from '../components/Layout'
     const {title,info,stack,image} = nodes[0]; 
     return (
         <Layout>
+          <SEO title="Acerca de Saúl"/>
             <section className="about-page">
                 <section className="section-center about-center">
                     <Image 

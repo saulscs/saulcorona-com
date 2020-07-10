@@ -5,7 +5,7 @@ import Image from 'gatsby-image'
 
 
  const Project = ({description, title,url,image,stack}) => {
-     console.log(title)
+     
     return (
         <article className="project">
             <Image fluid={image.childImageSharp.fluid} className="project-img"/>

@@ -6,7 +6,21 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata:{
+    title: "Programador",
+    description: "Portafolio",
+    author: "Saúl Corona",
+    img: "/static/Twitter-img.png",
+    twitterUsername: "@saul_scs",
+    siteUrl:"https://saulcorona.com"
+  },
   plugins: [
+    {
+     resolve:`gatsby-plugin-sitemap`,
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`
+    },
     {
       resolve: `gatsby-source-strapi`,
       options:{
