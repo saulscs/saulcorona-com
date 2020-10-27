@@ -38,7 +38,7 @@ const data = [
 
 const links = data.map( link => {
     return (
-        <li key={link.id}>
+        <li className="fadeInDown" key={link.id}>
             <a href={link.url} className="social-link" target="blank" >
                 {link.icon}
             </a>

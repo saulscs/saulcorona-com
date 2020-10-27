@@ -9,7 +9,7 @@ const Navbar = ({toggleSidebar}) => {
             <div className="nav-center">
                 <div className="nav-header">
                     <Link to="/">
-                        <p className="logo">SAÚL CORONA</p>
+                        <p className="logo fadeInDown">SAÚL CORONA</p>
                     </Link>
                     <button 
                         type="button" 

@@ -2,6 +2,7 @@ import React from 'react'
 import Title from './Title'
 import {FaAngleDoubleRight} from 'react-icons/fa'
 import {graphql, useStaticQuery} from 'gatsby'
+import {MoreBtn} from '../constants/buttons'
 import {Link} from 'gatsby'
 
 const query = graphql`
@@ -58,7 +59,7 @@ const query = graphql`
                     })}
                 </article> 
             </div>
-            <Link to="/acerca" className="btn center-btn">Más info</Link>
+                <MoreBtn title="Más info" link="/acerca"/>
         </section>
     )
 }

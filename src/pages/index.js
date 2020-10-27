@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
+import Companies from '../components/Companies'
 import Services from '../components/Services'
 import Jobs from '../components/Jobs'
 import Projects from '../components/Projects'
@@ -20,6 +21,7 @@ export default ({data}) => {
             title="Saúl Corona" 
           />
             <Hero/>
+            <Companies/>
             <Services/>
             <Jobs/>
             <Projects projects={projects} title="portafolio" showLink/>

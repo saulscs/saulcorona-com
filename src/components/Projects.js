@@ -1,7 +1,8 @@
 import React from 'react'
 import Title from './Title'
 import Project from './Project'
-import {Link} from 'gatsby'
+import {MoreBtn} from '../constants/buttons'
+
 
  const Projects = ({projects,title, showLink}) => {
     
@@ -20,9 +21,7 @@ import {Link} from 'gatsby'
                 })}
             </div>
             {showLink && (
-                    <Link to="/portafolio/" className="btn center-btn">
-                        Ver más
-                    </Link>
+                    <MoreBtn  title="Ver más" link="/portafolio"/>
                 )}
         </section>
     )

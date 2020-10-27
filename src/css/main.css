@@ -31,12 +31,17 @@ Variables
     --fixed-width: 700px;
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --whatsapp: #25d366;  
 }
 /*
   =============== 
   Global Styles
   ===============
   */
+
+html{
+  scroll-behavior: smooth;
+}
 
 *,
   ::after,
@@ -50,6 +55,7 @@ Variables
     font-family: var(--ff-secondary);
     background-color: var(--clr-white);
     color: var(--clr-grey-1);
+    overflow-x: hidden;
   }
 
   ul {
@@ -195,6 +201,97 @@ Variables
     color: var(--clr-primary-5);
   }
  
+/*ANIMATIONS*/
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeInDown {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  @keyframes fadeInDown {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+} 
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeInLeft {
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+  }
+  }
+  @keyframes fadeInLeft {
+      0% {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      }
+      100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+      }    
+   } 
+  .fadeIn {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+  }
+
+  .error{
+      font-size: 12px;
+      color: red;
+  }
+
+
+
 /*
   =============== 
   Navbar
@@ -498,6 +595,47 @@ Variables
   }
   
 }
+
+/*
+  =============== 
+  Companies
+  ===============
+  */
+
+.companies__images{
+  display: grid;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(1,1fr);
+  gap: 20px;
+}
+
+.companies__images--img{
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+ @media screen and (min-width: 676px) { 
+  .companies__images{
+    grid-template-columns: repeat(3,1fr);
+  }
+  .companies__images--img{
+    margin-bottom: 40px;
+  }
+} 
+
+ @media screen and (min-width: 992px) {
+  .companies__images{
+    grid-template-columns: repeat(5,1fr);
+  }
+  .companies__images--img{
+    width: 140px;
+  }
+}  
+
 
  /*
   =============== 
@@ -1034,3 +1172,45 @@ Variables
     
 }
 
+
+/*WHATSAPP BUTTON*/
+    
+.whatsapp-button{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  background-color: #25d366;
+  border-radius: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 25px -6px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 25px -6px rgba(0,0,0,1);
+  box-shadow: 0px 0px 25px -6px rgba(0,0,0,1);
+  animation: effect 5s infinite ease-in;
+}
+
+@keyframes effect {
+  20%, 100% {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+  }
+  0%, 10%{
+      width: 55px;
+      height: 55px;
+      font-size: 35px;
+  }
+  5%{
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+  }
+}

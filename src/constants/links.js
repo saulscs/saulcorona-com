@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 
+
 const data = [
     {
         id:1,
@@ -24,9 +25,11 @@ const data = [
     }
 ]
 
+
+
 const tempLinks = data.map( link => {
     return (
-        <li key={link.id}>
+        <li className="fadeInDown" key={link.id}>
             <Link to={link.url}>{link.text}</Link>
         </li>
     )

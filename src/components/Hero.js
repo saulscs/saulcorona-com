@@ -9,8 +9,8 @@ const Hero = () => {
                 <article className="hero-info">
                     <div>
                         <div className="underline"></div>
-                        <h1>Soy Saúl Corona</h1>
-                        <h3>Programador freelance</h3>
+                        <h1 className="fadeInDown">Soy Saúl Corona</h1>
+                        <h3 className="fadeIn">Programador freelance</h3>
                         <Link to ="/contacto" className="btn">
                             Contáctame
                         </Link>

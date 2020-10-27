@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Title from '../components/Title' 
-import {FaWhatsapp, FaMailBulk} from 'react-icons/fa' 
+import {FaWhatsapp, FaMailBulk, FaTelegram} from 'react-icons/fa' 
 import SEO from '../components/SEO'
 
 const contacto = () => {
@@ -29,11 +29,17 @@ const contacto = () => {
                                 </a>
                             </article>
                             <article>
-                                <a href="/contacto" 
+                                <a href="https://t.me/saulcoronascs" 
+                                target="blank"
                                 className="contact-link">
-                                <FaMailBulk/>
+                                <FaTelegram/>
                                 </a>
-                                <p>saulcoronascs@gmail.com</p>
+                                
+                                <a href="https://t.me/saulcoronascs" 
+                                target="blank"
+                                className="contact-link">
+                                <p>@saulcoronascs</p>
+                                </a>
                             </article>
                         </div>
                     </article>
