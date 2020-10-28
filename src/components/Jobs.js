@@ -3,11 +3,11 @@ import Title from './Title'
 import {FaAngleDoubleRight} from 'react-icons/fa'
 import {graphql, useStaticQuery} from 'gatsby'
 import {MoreBtn} from '../constants/buttons'
-import {Link} from 'gatsby'
+
 
 const query = graphql`
   {
-    allStrapiJobs(sort: {fields: strapiId, order: ASC}) {
+    allStrapiJobs(sort: {fields: strapiId, order: DESC}) {
       nodes {
         strapiId
         company

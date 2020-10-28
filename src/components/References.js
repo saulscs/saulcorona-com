@@ -1,27 +1,71 @@
 import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination,Scrollbar  } from 'swiper';
 import Title from './Title'
 import SigleReference from '../constants/references'
+
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
+
+SwiperCore.use([Navigation,Pagination,Scrollbar]);
+
+
+
 
  const References = () => {
     return (
         <section className="section reference">
             <Title title="referencias"/>
-            <div className="section-center services-center">
+            <Swiper 
+                navigation
+                lazy = {true}
+                slidesPerView={3}
+                spaceBetween={50}
+                loop= {true}
+                pagination={{ 
+                    clickable: true 
+                }}
+                breakpoints={{
+                    320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                    },
+                    760: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                      },
+                      990: {
+                        slidesPerView: 3,
+                        spaceBetween: 50
+                      }
+                }}
+                
+                scrollbar={{ 
+                    draggable: true, 
+                    hide:true,
+                    el: null,
+                }}
+                className="section-center services-center">
                 {SigleReference.map((reference) => {
-                    const {id,img,title,designation,description} = reference
+                    const {id,img,title,designation,description} = reference;
                     return(
-                        <article key={id} className="service">
-                            <a href="https://bit.ly/referenciasFacebook" target="blank">
+                        <SwiperSlide 
+                            key={id} 
+                            className="service"
+                        >
+                            <a 
+                                href="https://bit.ly/referenciasFacebook" 
+                                target="blank">
                             <img src={img} alt={title}/>
-                            </a>
                             <h4>{title}</h4>
                             <p className="designation">{designation}</p>
                             <div className="underline"></div>
+                            </a>
                             <p>{description}</p>
-                        </article>
+                        </SwiperSlide>
                     )
                 })}
-            </div>
+            </Swiper>
         </section>
     )
 }
