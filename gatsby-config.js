@@ -8,9 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata:{
     title: "Programador",
-    description: "Portafolio",
+    description: "Progamador freelance",
     author: "Saúl Corona",
-    img: "/static/Twitter-img.png",
+    img: "/Twitter-img.png",
     twitterUsername: "@saul_scs",
     siteUrl:"https://saulcorona.com"
   },
@@ -74,21 +74,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-sharp`,
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`100`, `400`, `500`, `600`, `700`, `900`],
-          },
-          {
-            family: `Open Sans`,
-            variants: [`100`, `400`, `500`, `600`, `700`, `900`],
-          }
-        ]
-      }
     },
   ],
 }

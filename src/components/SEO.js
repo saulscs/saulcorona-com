@@ -18,7 +18,7 @@ export const query = graphql`
 `
 
 const SEO = ({title, description}) => {
-    const  {site} = useStaticQuery(query)
+    const  {site} = useStaticQuery(query);
     const {
         siteTitle,
         siteDesc,
@@ -33,13 +33,48 @@ const SEO = ({title, description}) => {
             <meta 
                 name="description" 
                 content={description || siteDesc}></meta>
-            <meta name="image" content={img}></meta>
             {/*twitter cards */}
-            <meta name="twitter:card" content="sumary_large_image"/>
-            <meta name="twitter:creator" content={twitterUsername}/>
-            <meta name="twitter:title" content={siteTitle}/>
-            <meta name="twitter:description" content={siteDesc}/>
-            <meta name="twitter:image" content={`${siteUrl} ${img}`}/>
+           
+            <link 
+            rel="canonical" 
+            href="https://saulcorona.com/favicon.ico"
+            />
+            <link 
+            rel="favicon" 
+            href="https://saulcorona.com/favicon.ico"
+            />
+            <link 
+            rel="apple-touch-icon"
+            href="https://saulcorona.com"
+            />
+            <meta 
+            name="theme-color" 
+            content="#d9006"/>
+            <meta 
+            name="twitter:card" 
+            content="summary"/>
+            <meta 
+            property="og:type" 
+            content="website"/>
+            <meta 
+            property="og:title" 
+            name="twitter:title" 
+            content="Saúl Corona "
+            />
+            <meta 
+            property="og:description" 
+            name="twitter:description"
+            content="Programador freelance"
+            />
+            <meta 
+            property="og:image" 
+            name="twitter:image"
+            content="https://saulcorona.com/Twitter-img.png"/>
+            <meta 
+            property="og:url" 
+            name="twitter:url"
+            content="https://saulcorona.com"
+            />
         </Helmet>
     )
 }
