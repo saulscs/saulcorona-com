@@ -8,7 +8,10 @@ import Image from 'gatsby-image'
      
     return (
         <article className="project">
-            <Image fluid={image.childImageSharp.fluid} className="project-img"/>
+            <Image 
+                fluid={image.childImageSharp.fluid} 
+                className="project-img"
+            />
             <div className="project-info">
             <h3>{title}</h3>
             <p className="project-desc">{description}</p>

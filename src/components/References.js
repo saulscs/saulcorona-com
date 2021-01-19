@@ -49,19 +49,19 @@ SwiperCore.use([Navigation,Pagination,Scrollbar]);
                 {SigleReference.map((reference) => {
                     const {id,img,title,designation,description} = reference;
                     return(
-                        <SwiperSlide 
-                            key={id} 
-                            className="service"
-                        >
+                        <SwiperSlide key={id} className="service">
+                            <div>
                             <a 
                                 href="https://bit.ly/referenciasFacebook" 
-                                target="blank">
+                                target="blank"
+                                rel="noopener">
                             <img src={img} alt={title}/>
                             <h4>{title}</h4>
                             <p className="designation">{designation}</p>
                             <div className="underline"></div>
                             </a>
                             <p>{description}</p>
+                            </div>     
                         </SwiperSlide>
                     )
                 })}

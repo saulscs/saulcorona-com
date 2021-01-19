@@ -27,7 +27,7 @@ import { useStaticQuery, graphql } from "gatsby"
   `)
      return(
          <div className="companies-section">
-             <article class="companies__images section-center">
+             <article className="companies__images section-center">
              {data.allFile.edges.map((image, key) => (
             <Img
                 key={key}

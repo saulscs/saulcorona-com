@@ -12,7 +12,7 @@ import SEO from '../components/SEO'
          about:{nodes},
         }
     }) => {
-    const {title,info,stack,image} = nodes[0]; 
+    const {title,stack,image} = nodes[0]; 
     return (
         <Layout>
           <SEO title="Acerca de Saúl"/>

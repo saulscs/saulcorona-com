@@ -523,16 +523,14 @@ html{
    background: url('../assets/saul.jpg');
    background-size: cover;
    background-repeat: no-repeat;
-   background-position: center top;
-   background-attachment: fixed;
+  
 }
 @media (max-width: 768px){
   .hero{
     background: url('../assets/saulMobile.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
+    
     
   }
   .social-links {
