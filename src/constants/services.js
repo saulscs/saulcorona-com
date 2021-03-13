@@ -6,7 +6,7 @@ export default [
         id: 1,
         icon: <FaSketch className="service-icon"/>,
         title: "Diseño web",
-        text: `Te ayudo a crear tu sitio web o tienda online todo pensado en tener resultados en ventas, contactame para darte una solución personalisada y no un plan generico.`,
+        text: `Te ayudo a crear tu sitio web o tienda online todo pensado en tener resultados en ventas, contactame para darte una solución personalizada y no un plan generico.`,
     },
     {
         id: 2,

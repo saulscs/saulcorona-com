@@ -9,7 +9,7 @@ import { useStaticQuery, graphql } from "gatsby"
       allFile(
         filter: {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-          name: { in: ["rocket","krovh","IpesaPinturas","googoojob","CNU"] }
+          name: { in: ["krovh","IpesaPinturas","googoojob","CNU"] }
         }
       ) {
         edges {

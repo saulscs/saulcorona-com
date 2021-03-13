@@ -9,9 +9,6 @@ import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation,Pagination,Scrollbar]);
 
-
-
-
  const References = () => {
     return (
         <section className="section reference">
@@ -21,7 +18,7 @@ SwiperCore.use([Navigation,Pagination,Scrollbar]);
                 lazy = {true}
                 slidesPerView={3}
                 spaceBetween={50}
-                loop= {true}
+                // loop= {true}
                 pagination={{ 
                     clickable: true 
                 }}
